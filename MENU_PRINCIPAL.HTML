@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Principal - Sistema Restaurante</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🍽️ Control de Mesas</h1>
+  <div class="mesas" id="mesas"></div>
+  <div id="fechaHora" class="fecha-hora"></div>
+
+  <!-- Modal para editar mesa -->
+  <div id="mesaModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h2 id="tituloMesa"></h2>
+
+      <label>Estado:</label>
+      <select id="estadoMesa">
+        <option value="Libre">Libre</option>
+        <option value="Ocupada - Falta pagar">Ocupada - Falta pagar</option>
+        <option value="Ocupada - Pagado">Ocupada - Pagado</option>
+        <option value="Reservada con adelanto">Reservada con adelanto</option>
+      </select>
+
+      <label>Observaciones (plato pedido):</label>
+      <textarea id="observacionMesa" placeholder="Ej: Lomo saltado, ceviche, etc."></textarea>
+
+      <label>Precio del plato (S/):</label>
+      <input type="number" id="precioMesa" placeholder="Ej: 25.00">
+
+      <button onclick="guardarMesa()">Guardar</button>
+    </div>
+  </div>
+  <!-- Caja -->
+<div id="caja">
+  <h2>Caja del Restaurante</h2>
+  <p>Total acumulado: <span id="cajaTotal">S/ 0.00</span></p>
+</div>
+<!-- Font Awesome para iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Redes Sociales -->
+<div class="redes-sociales">
+  <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+  <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://wa.me/51999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

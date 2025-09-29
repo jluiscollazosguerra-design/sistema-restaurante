@@ -1,0 +1,165 @@
+
+/* ===== Estilo del logo en login ===== */
+.logo-login {
+  background: url("Captura-de-Pantalla-2020-06-09-a-las-1.46.50-p.-m..png") no-repeat center;
+  background-size: cover;
+  width: 200px;       /* Tamaño del logo */
+  height: 200px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 50%; /* Redondeada estilo avatar */
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+}
+
+/* ===== Estilo general ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4 url("Captura-de-Pantalla-2020-06-09-a-las-1.46.50-p.-m..png") no-repeat center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* ===== Fecha y hora ===== */
+#fecha {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#hora {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+  border: 2px solid #4CAF50;
+  display: inline-block;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* ===== Contenedores principales ===== */
+#login {
+  display: block; /* Visible al inicio */
+  margin-top: 100px;
+}
+
+#loading,
+#main {
+  display: none; /* Ocultos al inicio */
+  margin-top: 100px;
+}
+
+/* ===== Formularios login ===== */
+#login input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* ===== Mesas ===== */
+.mesas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px;
+}
+
+.mesa {
+  background:blue;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.mesa.libre { background: #b8f5b8; }
+.mesa.ocupada { background: #f5b8b8; }
+.mesa.pagado { background: #b8d8f5; }
+.mesa.reservada { background: #f5e3b8; }
+
+/* ===== Modal ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: violet;
+  margin: 10% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 90%;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===== Loader ===== */
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fecha-hora {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: black;
+}
+.redes-sociales {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.redes-sociales a {
+  font-size: 30px;
+  transition: transform 0.3s;
+}
+
+/* Colores reales de cada red social */
+.redes-sociales .fa-facebook { color: #1877F2; }   /* Facebook azul real */
+.redes-sociales .fa-youtube { color: #FF0000; }    /* YouTube rojo real */
+.redes-sociales .fa-instagram { color: #E1306C; }  /* Instagram degradado rosa/rojo */
+.redes-sociales .fa-whatsapp { color: #25D366; }   /* WhatsApp verde real */
+
+.redes-sociales a:hover {
+  transform: scale(1.2); /* efecto de aumento al pasar el mouse */
+}
+
